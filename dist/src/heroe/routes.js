@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.heroeRoute = void 0;
+const express_1 = require("express");
+const controller_1 = require("./controller");
+exports.heroeRoute = (0, express_1.Router)();
+exports.heroeRoute.get('/', controller_1.getAll);
+exports.heroeRoute.get('/:alte', controller_1.getByName);
+exports.heroeRoute.post('/', controller_1.create);
+exports.heroeRoute.delete('/:alte', controller_1.remove);
+exports.heroeRoute.put('/:id', controller_1.update);
